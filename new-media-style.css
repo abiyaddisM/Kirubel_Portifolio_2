@@ -33,7 +33,7 @@
         max-height: 280px;
     }
     .project-container .project-information{
-        max-width: 600px;
+        max-width: 500px;
     }
 
     .project-container .project-information .title{
@@ -76,6 +76,19 @@
         font-size: 1rem;
     }
     /*PRICE END*/
+    /*---------------------------------------------------------------------*/
+    /*CONTACT START*/
+    .form .info-input{
+        flex-direction: row;
+        gap: 1rem;
+        /*background-color: #ff6535;*/
+        align-items: center;
+        justify-content: center;
+    }
+    .form .info-input div{
+        width: 100%;
+    }
+    /*CONTACT END*/
 
 }
 /*@media for laptop size*/
@@ -235,6 +248,7 @@
     }
     .project-container .project-information{
         width: 380px;
+        min-width: 380px;
     }
 
     .project-container .project-information .title{
