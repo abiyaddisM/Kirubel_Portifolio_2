@@ -213,15 +213,15 @@ img{
     word-spacing: 2.7px;
     text-align: center;
 }
-.home .content p:after {
+.home .content p:before {
     content: '';
     width: 8rem;
     height: 1.3rem;
     background: linear-gradient(to right, rgba(252, 61, 3, 0.57), transparent);
     position: absolute;
-    left: 0.6rem;
     top: 0;
     z-index: -2;
+    /*margin-left: 1rem;*/
 }
 /*Icons container beside the image*/
 .home_logo {
