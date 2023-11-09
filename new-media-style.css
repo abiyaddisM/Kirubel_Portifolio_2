@@ -4,6 +4,8 @@
         --title-text-normal:2rem ;
     }
     /*HOME START*/
+    .home {
+    }
     .home .home-image .kirubelImage{
 
         width: 260px;
@@ -16,6 +18,7 @@
     }
     .home .home_name {
         font-size: 2rem;
+        margin-top: 5rem;
     }
     /*HOME END*/
     /*---------------------------------------------------------------------*/
@@ -30,6 +33,8 @@
 @media (min-width: 1024px) {
     :root{
         --body-text-normal:1.1 ;
+        --title-text-normal:2.2rem ;
+
     }
     .mainSection{
         padding: 0 6rem;
@@ -78,6 +83,7 @@
         justify-content: space-evenly;
         padding-bottom: 0;
         padding-top: 2rem;
+        max-width: 85rem;
     }
     /*Setting home page name*/
     .home-image{
@@ -108,13 +114,11 @@
         text-align: unset;
         margin-bottom: 4rem;
     }
-    .home .content p:after {
+    .home .content p:before {
         width: 10rem;
         height: 1.3rem;
         background: linear-gradient(to right, rgba(252, 61, 3, 0.57), transparent);
         position: absolute;
-        /*left: 0rem;*/
-        top: 0;
         z-index: -2;
     }
     .home_logo {
@@ -145,12 +149,48 @@
     /*HOME END*/
     /*---------------------------------------------------------------------*/
 
+    /*ABOUT START*/
+    .about_container_2
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 85rem;
+        width: 100%;
+        margin-top: 3.5rem;
+    }
+    .aboutMeTitle{
+        display: none;
+    }
+    .content .aboutMeTitle{
+        display: flex;
+        margin-bottom: 2rem;
+        margin-left: -1.3rem;
+    }
+    .about-image .image{
+        max-width: 300px;
+    }
+    .about .content{
+        margin-left: 8rem;
+    }
+    .contact-button{
+        justify-content: left;
+    }
+    /*ABOUT END*/
+
+    /*---------------------------------------------------------------------*/
+
 
 }
+
+
+
 
 @media (min-width: 1224px) {
     :root{
         --body-text-normal: 1.25rem;
+        --title-text-normal: 2.7rem;
     }
     .mainSection{
         padding: 0 8rem;
@@ -158,7 +198,7 @@
     }
     /*HEADER START*/
     .header{
-        padding: 0 10rem;
+        padding: 0 8rem;
         transition: 1s;
     }
     /*HEADER END*/
@@ -180,4 +220,13 @@
     /*HOME END*/
     /*---------------------------------------------------------------------*/
 
+}
+@media (min-width: 1440px) {
+    /*HEADER START*/
+    .header{
+        padding: 0 11rem;
+        transition: 1s;
+    }
+    /*HEADER END*/
+    /*---------------------------------------------------------------------*/
 }
