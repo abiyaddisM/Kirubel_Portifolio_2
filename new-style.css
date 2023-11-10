@@ -552,10 +552,11 @@ font-size: 1rem;
 }
 #contact-me .contact-container{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    position: relative;
 
 
 }
@@ -563,17 +564,23 @@ font-size: 1rem;
     transform: translateX(-90px);
     max-width: 350px;
     font-size: var(--title-text-normal);
+
 }
+
 .form-info{
     transform: translatey(80px);
-    padding: 60px 50px;
+    padding: 50px 50px;
     background: linear-gradient(to bottom, rgb(206, 205, 205) 98%, #ff6535 98% );
-    max-width: 500px;
+    max-width: 350px;
     margin: 0 3rem;
+}
+.form-info .geometric-box {
+    right: 2rem;
+    top: 3rem;
 }
 #contact-me .form-info p{
     margin-top: 30px;
-    font-size: var(--body-text-normal);
+    font-size: 1rem;
     /*max-width: 300px;*/
 }
 .form{
@@ -583,6 +590,7 @@ font-size: 1rem;
     padding: 100px 20px 20px 20px;
     background-color: #000000;
     width: 100%;
+    max-width: 53rem;
 }
 .form form{
     width: 100%;
