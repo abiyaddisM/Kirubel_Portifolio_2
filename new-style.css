@@ -479,7 +479,7 @@ position: absolute;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     margin-top: 3rem;
 }
 .pricing-row{
@@ -549,6 +549,7 @@ font-size: 1rem;
     justify-content: center;
     margin-top: 40px;
     width: 100%;
+    min-height: 90vh;
 }
 #contact-me .contact-container{
     display: flex;
@@ -590,7 +591,6 @@ font-size: 1rem;
     padding: 100px 20px 20px 20px;
     background-color: #000000;
     width: 100%;
-    max-width: 53rem;
 }
 .form form{
     width: 100%;
