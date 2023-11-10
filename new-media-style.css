@@ -243,11 +243,11 @@
 
     /*PROJECT START*/
     .project-container img{
-        max-height: 240px;
+        max-height: 220px;
     }
     .project-container .project-information{
-        width: 380px;
-        min-width: 380px;
+        width: 360px;
+        min-width: 360px;
     }
 
     .project-container .project-information .title{
@@ -314,7 +314,7 @@
     }
     .form{
         padding: 100px 80px;
-        max-width: 53rem;
+        max-width: 63rem;
     }
     .form-info{
         transform: translateX(80px);
@@ -327,7 +327,18 @@
     }
         /*CONTACT END*/
     /*---------------------------------------------------------------------*/
+    .footer {
+        flex-direction: row;
 
+    }
+    .footer p{
+        order: 1;
+    }
+
+    .footer-nav{
+        order: 2;
+        margin-bottom: 0;
+    }
 
 
 }
