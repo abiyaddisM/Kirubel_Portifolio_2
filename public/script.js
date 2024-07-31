@@ -12,7 +12,7 @@ underline.forEach(underLine=>{
 
 const sections = document.querySelectorAll('.section');
 window.addEventListener('scroll',()=>{
-    const scrollY = window.scrollY + 110; //the distance of how long the window moved
+    const scrollY = window.scrollY ; //the distance of how long the window moved
 
     sections.forEach((section,index) =>{
         const sectionTop = section.offsetTop;

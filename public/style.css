@@ -1,17 +1,26 @@
 :root
 {
-    --first-color: hsl(14, 98%, 50%);
-    --black-color: hsl(0, 0%, 0%);
-    --black-color-light: hsl(0, 0%, 40%);
-    --white-color: hsl(0, 0%, 95%);
-    --body-color: hsl(0, 0%, 87%);
-    --container-color: hsla(0, 0%, 83%, 0.84);
+
     --body-text-normal: 1rem;
     --title-text-normal: 1.8rem;
 
+    --primary-color: hsl(14, 98%, 50%);
 
+    --black-color: hsl(0, 0%, 0%);
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --white-gray-color: hsl(0, 0%, 87%);
 
+    --black-red-color: hsl(0, 7%, 8%);
+    --white-light-color: #d9d3d0;
+    --gray-color: #858585;
+    --gray-dark-color: #262626;
 
+    --body-color: var(--white-gray-color);
+    --container-color: hsla(0, 0%, 83%, 0.84);
+    --main-color: var(--black-color);
+    --main-light-color: var(--black-color-light);
+    --secondary-color: var(--white-color);
 }
 /*This is to restart the default to zero*/
 *{
@@ -24,7 +33,8 @@
     text-decoration:none;
     /*transition: .2s linear;*/
     object-fit: cover; /* Clip the image to cover the container */
-    transition: 0.2s;
+    transition: 0.2s ;
+    transition: 0.2s background-color !important;
 }
 /*Setting the html to hide the elements that go out side its bounds*/
 html {
@@ -41,7 +51,6 @@ body
 /*Container for all the section*/
 .mainSection{
     padding: 0 1.8rem;
-    transition: 1s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,10 +74,15 @@ img{
     padding: 0.4rem 1.6rem;
     z-index:5;
 }
-/*Setting up the logo "Kirubel T"*/
+/*Setting up the logo "abiy T"*/
 .header .logo{
     font-size: 1.2rem;
-    color: var(--black-color);
+    color: var(--main-color);
+}
+.header .navbar-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 /*Setting up the nav bars container*/
 .header .navbar{
@@ -77,7 +91,7 @@ img{
     left: 0;
     right: 0;
     background: var(--container-color);
-    transition: 0.5s;
+    /*transition: 0.5s;*/
     overflow: hidden;
     height:0;
     opacity: 0;
@@ -91,11 +105,18 @@ img{
     width: fit-content;
     margin: 60px auto 0 auto;
     text-align: center;
-    transition: 0.5s;
+    /*transition: 0.5s;*/
     font-size: 1.2rem;
     opacity: 0;
     position: relative;
-    color: var(--black-color);
+    color: var(--main-color);
+}
+.header .theme-button{
+    background-color: transparent;
+    color: var(--main-color);
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
 }
 /*Is the animation for the drop down*/
 .navbar.active{
@@ -110,6 +131,7 @@ img{
 #menu_btn{
     font-size: 1.8rem;
     display: block;
+    color: var(--main-color);
 }
 /*Setting up the default state for the underline animation*/
 .underline-effect::before{
@@ -119,7 +141,7 @@ img{
     left: 0;
     width: 0;
     height: 0.209rem;
-    background: var(--black-color);
+    background: var(--main-color);
     transition: 0.2s linear;
 }
 /*Animates when mouse is hovered*/
@@ -132,6 +154,7 @@ img{
 }
 .section-title{
     font-size: var(--title-text-normal);
+    color: var(--main-color);
 }
 /*HEADER END*/
 
@@ -165,8 +188,10 @@ img{
     position: relative;
 }
 /*Setting up the width for the image*/
-.home .home-image .kirubelImage{
+.home .home-image .abiyImage{
     width: 200px;
+    aspect-ratio: 5/8;
+
     z-index: 3;
 }
 /*Background art for image*/
@@ -175,11 +200,13 @@ img{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--container-color);
-    border: 4px solid var(--black-color);
+    border: 4px solid var(--main-color);
     left: 0.7rem;
     top: 0.5rem;
     z-index: -1;
+}
+.home .home_logo .logo{
+    background-color: var(--main-color);
 }
 /*Background art for image*/
 .home-image .geometric-box{
@@ -189,7 +216,7 @@ img{
 /*Background art for image*/
 .home-image .home_arrow{
     position: absolute;
-    filter: invert();
+    /*filter: invert();*/
     top: 18.5rem;
     left: 6rem;
     width: 50px;
@@ -205,6 +232,7 @@ img{
 }
 .home .content .home_name{
     display: none;
+    color: var(--main-color);
 }
 /*Setting home paragraph container*/
 .home .content{
@@ -220,6 +248,7 @@ img{
     font-size: var(--body-text-normal);
     word-spacing: 2.7px;
     text-align: center;
+    color: var(--main-color);
 }
 .home .content p:before {
     content: '';
@@ -250,7 +279,7 @@ img{
 }
 /*Hover animation for icons*/
 .home_logo .logo:hover{
-    color: var(--white-color);
+    color: var(--secondary-color);
 }
 /*Scroll button container*/
 .home_scroll{
@@ -262,11 +291,11 @@ img{
 
     display: flex;
     justify-content: center;
-    background: var(--black-color);
+    background: var(--main-color);
     padding: 0.5rem;
     overflow: hidden;
     transition: all 0.4s;
-    color: var(--white-color);
+    color: var(--secondary-color);
 
 
 }
@@ -275,7 +304,7 @@ img{
 }
 .scrollDown_text{
     display: none;
-    color: var(--black-color);
+    color: var(--main-color);
     font-size: 0.8rem;
     font-weight: bold;
     margin-top: .5rem;
@@ -299,6 +328,7 @@ img{
 .aboutMeTitle{
     font-size: var(--title-text-normal);
     margin-bottom: 5rem;
+    color: var(--main-color);
 }
 .content .aboutMeTitle{
    display: none;
@@ -321,14 +351,13 @@ img{
     position: relative;
 }
 .about-image .image{
-    border: #f8f8f8 5px solid;
+    border: var(--secondary-color) 5px solid;
     max-width: 210px;
     z-index: 3;
 }
 .about-image .random-lines{
     position: absolute;
     width: 3.5rem;
-    filter: invert();
     right: -2rem;
     z-index: 1;
     /*left: 1rem;*/
@@ -343,8 +372,8 @@ position: absolute;
     height: 130%;
     width: 12rem;
     right: -4rem;
-    background-color: #eae9e9;
-    border-bottom: 4px solid var(--first-color);
+    background-color: var(--secondary-color);
+    border-bottom: 4px solid var(--primary-color);
     z-index: 0;
 
 }
@@ -355,16 +384,21 @@ position: absolute;
     font-size: var(--body-text-normal);
     margin-bottom: 2rem;
     position: relative;
+    color: var(--main-color);
 
 }
 .about_container_2 .content p:after {
     content: '';
     width: 14px;
     height: 1px;
-    background-color: black;
+    background-color: var(--main-color);
     position: absolute;
     left: -1.3rem;
     top: 0.7rem;
+}
+.about .content ul li{
+    color: var(--main-color);
+
 }
 .about .content ul li span{
     font-weight: bold;
@@ -378,10 +412,21 @@ position: absolute;
 }
 .contact-button .button{
     display: flex;
-    background-color: black;
-    color: #efefef;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
     gap: 0.5rem;
     padding: 16px 20px;
+    cursor: pointer;
+}
+.contact-button .button span {
+    font-size: 14px;
+    transition: 1s;
+
+}
+
+.contact-button .button:hover {
+    background-color: var(--main-light-color);
+
 }
 /*ABOUT END*/
 /*---------------------------------------------------------------------*/
@@ -415,12 +460,13 @@ position: absolute;
 
 }
 .project-container:hover{
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: var(--secondary-color);
 }
 .project-container img{
     width: 100%;
     max-height: 200px;
     max-width: 600px;
+    aspect-ratio: 16/9;
     object-fit: cover;
     object-position: top right;
 }
@@ -428,31 +474,34 @@ position: absolute;
     right: 2rem;
     top: 11.7rem;
     position: absolute;
-    background-color: rgb(38, 37, 37);
+    background-color: var(--main-color);
     padding: 15px 18px;
-    color: white;
+    color: var(--secondary-color);
     font-size: 1rem;
+    cursor: pointer;
 }
 .project-container .link-button:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--main-light-color);
 
 }
 
 .project-container .project-information{
     margin-top: 15px;
     max-width: 400px;
-    /*background-color: #ff6535;*/
+
 }
 .project-container .project-information .title{
     font-size: 1.2rem;
+    color: var(--main-color);
 }
 .project-container .hired-by-name{
     font-size: 0.8rem ;
+    color: var(--main-color);
 }
 .project-container .project-information .description{
     margin-top: 10px;
-    font-size: 0.9rem;
-    color: #4f4e4e;
+    font-size: var(--body-text-normal);
+    color: var(--main-light-color);
 }
 .project-container .other-links{
     /*background-color: #ff6535;*/
@@ -460,10 +509,10 @@ position: absolute;
 }
 .other-links .logo{
     font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.69);
+    color: var(--main-light-color);
 }
 .other-links .logo:hover{
-    color: rgb(0, 0, 0);
+    color: var(--main-color);
 }
 .other-links .logo::after{
     content: " View";
@@ -472,77 +521,6 @@ position: absolute;
 }
 
 /*PROJECT END*/
-/*---------------------------------------------------------------------*/
-/*PRICE START*/
-.pricing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    min-height: 90vh;
-    margin-top: 3rem;
-}
-.pricing-row{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 4rem;
-}
-.pricing-col{
-    position: relative;
-    border: 2px solid var(--black-color);
-    background: var(--white-color);
-    transition: all 0.4s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1.2rem 1rem;
-    height: 18rem;
-    width: 95%;
-    max-width: 600px;
-    margin-bottom: 1.3rem;
-
-
-
-}
-.pricing-col:hover{
-    transform: translateY(-7px);
-    background: var(--container-color);
-    box-shadow: 3px 4px 8px rgba(0, 0, 0, 1);
-}
-.pricing-col h3{
-    font-size: 1.6rem;
-    margin-bottom: 3rem;
-}
-.pricing-col:hover h3{
-    color: var(--first-color);
-
-}
-.info_price{
-    width: 100%;
-    /*background-color: #ff6535;*/
-}
-.info_price p{
-font-size: 1rem;
-}
-.see-more-div{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-.see-more{
-    background-color: black;
-    color: white;
-    padding: 14px 20px;
-    align-self: flex-end;
-    font-size: 0.8rem;
-}
-/*PRICE END*/
 /*---------------------------------------------------------------------*/
 /*CONTACT START*/
 #contact-me{
@@ -572,7 +550,8 @@ font-size: 1rem;
 .form-info{
     transform: translatey(80px);
     padding: 50px 50px;
-    background: linear-gradient(to bottom, rgb(206, 205, 205) 98%, #ff6535 98% );
+    background: linear-gradient(to bottom, var(--secondary-color) 98%, #ff6535 98% );
+
     max-width: 350px;
     margin: 0 3rem;
 }
@@ -583,6 +562,7 @@ font-size: 1rem;
 #contact-me .form-info p{
     margin-top: 30px;
     font-size: 1rem;
+    color: var(--main-color);
     /*max-width: 300px;*/
 }
 .form{
@@ -590,7 +570,7 @@ font-size: 1rem;
     flex-direction: column;
     align-items: center;
     padding: 100px 20px 20px 20px;
-    background-color: #000000;
+    background-color: var(--main-color);
     width: 100%;
 }
 .form form{
@@ -602,7 +582,7 @@ font-size: 1rem;
 }
 
 .form h1{
-    color: white;
+    color: var(--secondary-color);
     margin-bottom: 40px;
     font-size: 1.2rem;
 }
@@ -618,10 +598,10 @@ font-size: 1rem;
 }
 .form .text-input{
     padding: 15px;
-    border: rgba(255, 255, 255, 0.72) solid 1px;
+    border: var(--secondary-color) solid 1px;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 .form label{
@@ -629,14 +609,14 @@ font-size: 1rem;
     margin-top: -7px;
     margin-left: 10px;
     padding: 0 5px;
-    color: white;
-    background-color: #000000;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
     font-size: 0.8rem;
 }
 .send-button button{
     padding: 16px 18px;
     background-color: #ff6535;
-    color: white;
+    color: var(--white-color);
 }
 .send-button button:hover{
     background-color: #ff3523;
@@ -651,18 +631,18 @@ font-size: 1rem;
     justify-content: space-between;
     flex-direction: column;
     padding: 2.3rem 1.7rem;
-    background: var(--black-color);
+    background: var(--main-color);
     margin-top: 7rem;
 }
 .footer p{
-    color: var(--black-color-light);
+    color: var(--main-light-color);
     font-size: var(--medium-text);
     cursor: pointer;
     order: 2;
 }
 .footer p span
 {
-    color: var(--white-color);
+    color: var(--secondary-color);
 }
 .footer-nav{
     order: 1;
@@ -671,7 +651,7 @@ font-size: 1rem;
 .footer a{
     font-size: var(--body-text);
     margin: 1.5rem;
-    color: var(--white-color);
+    color: var(--secondary-color);
     transition: all 0.2s ease;
 }
 .footer a:hover{
@@ -679,8 +659,8 @@ font-size: 1rem;
 }
 .footer_scroll{
     transition: all 0.4s ease;
-    color: white;
-    background-color: black;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
     padding: 0.4rem;
     position: fixed;
     right: 0.4rem;
@@ -703,7 +683,7 @@ font-size: 1rem;
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--first-color);
+    background-color: var(--primary-color);
     rotate: -30deg;
     /*z-index: 20;*/
 }
@@ -711,14 +691,14 @@ font-size: 1rem;
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--first-color);
+    background-color: var(--primary-color);
 }
 .geometric-box::after {
     content: "";
     position: absolute;
     width: 16px;
     height: 16px;
-    border: 3px solid var(--black-color);
+    border: 3px solid var(--main-color);
     left: -5px;
     top: -5px;
 }

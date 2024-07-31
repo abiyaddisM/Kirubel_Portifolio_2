@@ -1,12 +1,12 @@
 /*@media for tablet size*/
-@media (min-width: 525px) {
+@media (min-width: 469px) {
     :root{
         --title-text-normal:2rem ;
     }
     /*HOME START*/
     .home {
     }
-    .home .home-image .kirubelImage{
+    .home .home-image .abiyImage{
 
         width: 260px;
     }
@@ -53,7 +53,7 @@
         font-size: 1.1rem;
     }
     .other-links .logo:hover{
-        color: rgb(0, 0, 0);
+        color: var(--main-color);
     }
     .other-links .logo::after{
         content: " View";
@@ -91,7 +91,7 @@
 
 }
 /*@media for laptop size*/
-@media (min-width: 1024px) {
+@media (min-width: 980px) {
     :root{
         --body-text-normal:1.1 ;
         --title-text-normal:2.2rem ;
@@ -151,7 +151,7 @@
         padding-bottom: 0;
         margin-left: 3rem;
     }
-    .home-image .kirubelImage{
+    .home-image .abiyImage{
         min-width: 300px;
     }
     .home .home_name{
@@ -254,7 +254,7 @@
         font-size: 1.3rem;
     }
     .project-container .link-button{
-        top: 14.4rem;
+        top: 13rem;
     }
     .project-container .hired-by-name{
         font-size: 0.9rem ;
@@ -267,7 +267,7 @@
         font-size: 1rem;
     }
     .other-links .logo:hover{
-        color: rgb(0, 0, 0);
+        color: var(--main-color);
     }
     .other-links .logo::after{
         content: " View";
@@ -275,25 +275,6 @@
         float: revert;
     }
     /*PROJECT END*/
-    /*---------------------------------------------------------------------*/
-    /*PRICE START*/
-    .pricing {
-        max-width: 90rem;
-    }
-    .pricing-row {
-        flex-direction: row;
-        gap: 1rem;
-    }
-    .pricing-col h3 {
-        font-size: 1.8rem;
-    }
-    .info_price p{
-        font-size: 1.2rem;
-    }
-    .see-more{
-        font-size: 1rem;
-    }
-    /*PRICE END*/
     /*---------------------------------------------------------------------*/
     /*CONTACT START*/
     #contact-me .contact-container {
@@ -353,12 +334,12 @@
     }
     .mainSection{
         padding: 0 8rem;
-        transition: 1s;
+        /*transition: 1s;*/
     }
     /*HEADER START*/
     .header{
         padding: 0 8rem;
-        transition: 1s;
+        /*transition: 1s;*/
     }
     /*HEADER END*/
     /*---------------------------------------------------------------------*/
@@ -391,7 +372,7 @@
     /*HEADER START*/
     .header{
         padding: 0 11rem;
-        transition: 1s;
+        /*transition: 1s;*/
     }
     /*HEADER END*/
     /*---------------------------------------------------------------------*/
