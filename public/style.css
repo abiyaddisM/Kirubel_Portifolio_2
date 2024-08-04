@@ -127,6 +127,11 @@ img{
 .navbar.active a{
     opacity: 1;
 }
+.menu_check{
+    background-color: transparent;
+}
+
+
 /*Setting up the drop down button*/
 #menu_btn{
     font-size: 1.8rem;
